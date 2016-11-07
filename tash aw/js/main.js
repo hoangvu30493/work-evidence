@@ -1,45 +1,49 @@
 $(document).ready(function() {
 
 
-    // TOGGLE SLIDE UPDATE_EVENT
+    // TOGGLE SLIDE DOWN UPDATE&EVENT 
     $("#update_click").click(function() {
         $("#slidedown1").toggle(400);
     });
     $("#event_click").click(function() {
         $("#slidedown2").toggle(400);
     });
-
-
-    // SCROLL SCREEN
-    $("#to_about").click(function() {
-        $('html,body').animate({
-                scrollTop: $("#scroll_about").offset().top
-            },
-            'slow');
-    });
-    $("#to_books").click(function() {
-        $('html,body').animate({
-                scrollTop: $("#scroll_books").offset().top
-            },
-            'slow');
-    });
-    $("#to_contact").click(function() {
-        $('html,body').animate({
-                scrollTop: $("#scroll_contact").offset().top
-            },
-            'slow');
-    });
-
 });
 
 
-// function RemoveLastDirectoryPartOf(the_url) {
-//     var the_arr = the_url.split('#');
-//     the_arr.pop();
-//     return (the_arr.join('#'));
-// }
 
-// function clearSuffix() {
-//     window.location.href = 'file:///C:/Users/User/Desktop/tash%20aw/index.html#scroll_books';
+// SCROLL MENU ANIMATE
+$('.menu_link').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 700);
+    }
+});
 
-// }
+
+
+
+// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+    interval: false
+});
+
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function() {
+    var next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length > 0) {
+        next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+});

@@ -23,7 +23,7 @@
 
     <!--HEADER NAVBAR-->
     <header>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid nav-header">
                 <div class="tash-brand">
                     <a href="index.html"><img src="img/tash_website1.jpg" alt="">
@@ -48,16 +48,16 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a id="to_about">About</a>
+                            <a href="#scroll_about" class="menu_link">About</a>
                         </li>
                         <li>
-                            <a id="to_books">Books</a>
+                            <a href="#scroll_books" class="menu_link">Books</a>
                         </li>
                         <li>
                             <a href="updates.html">Updates</a>
                         </li>
                         <li>
-                            <a id="to_contact">Contact</a>
+                            <a href="#scroll_contact" class="menu_link">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -125,31 +125,89 @@
             </div>
 
 
-            <!--BOOKS SLIDER-->
+
+            <!--BOOKS SLIDER LARGE SCREEN DEVICES-->
             <div class="books-type">
                 <div class="row">
-                    <div class="books-type-frame nav nav-tabs">
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="books-frame active">
-                                <a data-toggle="tab" href="#theface"><img src="img/The FACE.jpeg" alt=""></a>
+                    <div class="books-type-frame nav nav-tabs carousel slide multi-item-carousel" id="theCarousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-md-4 col-sm-4 ">
+                                    <div class="books-frame active">
+                                        <a data-toggle="tab" href="#theface"><img src="img/The FACE.jpeg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <div class="col-md-4 col-sm-4 ">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#millionaire"> <img src="img/fivestarbillionaire_1.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-4 ">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#invisible_world"> <img src="img/mapotiw_4.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#theface"> <img src="img/The FACE.jpeg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-4 ">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#invisible_world"> <img src="img/mapotiw_4.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="books-frame">
-                                <a data-toggle="tab" href="#millionaire"> <img src="img/fivestarbillionaire_1.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="books-frame">
-                                <a data-toggle="tab" href="#invisible_world"> <img src="img/mapotiw_4.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <!--Slide button-->
-                        <img id="arrow_button" src="img/tash_website3.png" alt="">
+                        <a class="right carousel-control" href="#theCarousel" data-slide="next"><img class="arrow_button" src="img/tash_website3.png" alt=""></a>
                     </div>
                 </div>
             </div>
 
+
+
+            <!--BOOKS SLIDER SMALL SCREEN DEVICES-->
+            <div class="books-type-small">
+                <div class="row">
+                    <div id="carousel-example-generic" class="books-type-frame nav nav-tabs carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-xs-12">
+                                    <div class="books-frame active">
+                                        <a data-toggle="tab" href="#millionaire"> <img src="img/fivestarbillionaire_1.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-12">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#theface"><img src="img/The FACE.jpeg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-12">
+                                    <div class="books-frame">
+                                        <a data-toggle="tab" href="#invisible_world"> <img src="img/mapotiw_4.jpg" alt="" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><img class="arrow_button" src="img/tash_website3.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -210,9 +268,10 @@
                                 <p>Phoebe is a factory girl who has come to Shanghai with the promise of a job—but when she arrives she discovers that the job doesn’t exist. Gary is a country boy turned pop star who is spinning out of control. Justin is
                                     in Shanghai to expand his family’s real estate empire, only to find that he might not be up to the task. He has long harbored a crush on Yinghui, a poetry-loving, left-wing activist who has reinvented herself as a successful
                                     Shanghai businesswoman. Yinghui is about to make a deal with the shadowy , the five star billionaire of the novel, who with his secrets and his schemes has a hand in the lives of each of the characters. All bring their
-                                    dreams and hopes to Shanghai, the shining symbol of the New China, which, like the novel’s characters, is constantly in flux and which plays its own fateful role in the lives of its inhabitants.<br><br>Five Star Billionaire
-                                    is a dazzling, kaleidoscopic novel that offers rare insight into the booming world of Shanghai, a city of elusive identities and ever-changing skylines, of grand ambitions and outsize dreams. Bursting with energy, contradictions,
-                                    and the promise of possibility, Tash Aw’s remarkable new book is both poignant and comic, exotic and familiar, cutting-edge and classic, suspenseful and yet beautifully unhurried. Lorem ipsum dolor sit amet, consectetur
+                                    dreams and hopes to Shanghai, the shining symbol of the New China, which, like the novel’s characters, is constantly in flux and which plays its own fateful role in the lives of its inhabitants.
+                                    <br><br>Five Star Billionaire is a dazzling, kaleidoscopic novel that offers rare insight into the booming world of Shanghai, a city of elusive identities and ever-changing skylines, of grand ambitions and outsize dreams.
+                                    Bursting with energy, contradictions, and the promise of possibility, Tash Aw’s remarkable new book is both poignant and comic, exotic and familiar, cutting-edge and classic, suspenseful and yet beautifully unhurried.
+                                    Lorem ipsum dolor sit amet, consectetur
                                     <br><br> adipisicing elit. Quos aliquid, expedita autem eos suscipit deserunt reiciendis fugiat necessitatibus sint, fugit quasi voluptatem numquam architecto cumque nesciunt commodi vero, enim quisquam.
                                 </p>
                             </div>
@@ -240,14 +299,12 @@
                                 <div class="small-frame-book">
                                     <img src="img/billionaire.jpg" alt="">
                                 </div>
-                                <div class="small-frame-book">
-                                    <img src="img/fivestarbillionaire_2.jpg" alt="">
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="book-description">
-                                <h4>Five Star Billionaire</h4>
+                                <h4>Map of the Invisible World</h4>
                                 <p>Phoebe is a factory girl who has come to Shanghai with the promise of a job—but when she arrives she discovers that the job doesn’t exist. Gary is a country boy turned pop star who is spinning out of control. Justin is
                                     in Shanghai to expand his family’s real estate empire, only to find that he might not be up to the task. He has long harbored a crush on Yinghui, a poetry-loving, left-wing activist who has reinvented herself as a successful
                                     Shanghvel that offers rare insight into the booming world of Shanghai, a city of elusive identities and ever-changing skylines, of grand ambitions and outsize dreams. Bursting with energy, contradictions, and the promise
@@ -293,7 +350,6 @@
 
 
 
-
     <!--FOOTER-->
     <footer>
         <div class="container-fluid">
@@ -310,8 +366,13 @@
                 </div>
             </div>
         </div>
-
     </footer>
+
+
+
+
+
+
     <!--Scripts links-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
